@@ -18,9 +18,9 @@ public class Locator {
     By contextual_menu = By.xpath("/hierarchy/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.ExpandableListView");
     By Drag_and_Drop = By.xpath("//android.widget.TextView[@content-desc=\"Drag and Drop\"]");
     By Drag_and_Drop_section = By.xpath("/hierarchy/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.RelativeLayout");
-    By Menu_check = By.xpath("/hierarchy/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.RelativeLayout");
     By firstCircle = By.id("io.appium.android.apis:id/drag_dot_1");
     By secondCircle = By.id("io.appium.android.apis:id/drag_dot_2");
+    By droppedMessage = By.xpath("//android.widget.TextView[@text='Dropped!']");
     public Locator(AppiumDriver driver) {
         this.driver = driver;
     }
@@ -64,6 +64,9 @@ public class Locator {
     }
     public  WebElement secondCircle(){
         return driver.findElement(secondCircle);
+    }
+    public WebElement droppedMessage() {
+    return driver.findElement(droppedMessage);
     }
 
 }
