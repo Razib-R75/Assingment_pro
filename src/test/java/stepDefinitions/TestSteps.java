@@ -104,13 +104,28 @@ public class TestSteps {
 
     @When("drags the first circle onto the second circle")
     public void theUserDragsTheFirstCircleOntoTheSecondCircle() throws InterruptedException {
-        // Get the location of the first and second circles
-        Assert.assertTrue(testingApp.firstCircle().isDisplayed()); // Wait for 2 seconds to see the result of the action // Wait for 2 seconds to see the result of the action
+    WebElement firstCircle = testingApp.First_Circle();  
+    WebElement secondCircle = testingApp.Second_Circle(); 
+
+   
+    Point firstCircleLocation = firstCircle.getLocation();
+    Point secondCircleLocation = secondCircle.getLocation();
+
+    // Perform the drag and drop action using TouchAction
+    new TouchAction(driver)
+        .press(PointOption.point(firstCircleLocation.getX(), firstCircleLocation.getY()))  // Press the first circle
+        .waitAction(WaitOptions.waitOptions(Duration.ofMillis(100))) // Optionally wait for the press action
+        .moveTo(PointOption.point(secondCircleLocation.getX(), secondCircleLocation.getY()))  // Move to the second circle
+        .release() // Release the touch to drop the item
+        .perform();
+
+    
+    Thread.sleep(2000); 
     }
 
 
     @Then("a success message or UI change should confirm the successful completion of the action.")
     public void aSuccessMessageOrUIChangeShouldConfirmTheSuccessfulCompletionOfTheAction() {
-        Assert.assertTrue(testingApp.secondCircle().isDisplayed());
+        Assert.assertTrue(testingApp.droppedMessage().isDisplayed());
     }
 }
