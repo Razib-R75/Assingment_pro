@@ -18,7 +18,7 @@ This assingment implements automated UI testing for a mobile application using S
 Clone the repository from GitHub:
 
 ```bash
-git clone https://github.com/your-repo/automation-testing-project.git
+git clone https://github.com/Razib-R75/Assingment_pro.git
 cd automation-testing-project
 ```
 
