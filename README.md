@@ -117,11 +117,13 @@ Once the tests are executed, you should see the following expected behaviors:
 
 1. **Console Output**:
    - TestNG will provide detailed logs showing whether each test passed or failed.
+   - ![Screenshot 2024-11-08 151215](https://github.com/user-attachments/assets/c5cdd474-b35a-45b6-8a31-3dc718cc7699)
+
   
 
 2. **Appium Logs**:
    - Logs showing communication between the Appium server and the Android Emulator will be visible in the console.
-   
+     ![Screenshot 2024-11-08 151358](https://github.com/user-attachments/assets/3809ba57-e29f-4c4f-9958-6d7dcb872ef5)
 
 3. **TestNG Report**:
    - After the tests complete, a TestNG report will be generated in the `/allure-report` directory.
