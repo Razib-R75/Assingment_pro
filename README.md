@@ -117,34 +117,16 @@ Once the tests are executed, you should see the following expected behaviors:
 
 1. **Console Output**:
    - TestNG will provide detailed logs showing whether each test passed or failed.
-   - Example of a successful test run output:
-     ```
-     [TestNG] Running: RunTests
-     ================================================
-     TestNG 7.4.0 by Cédric Beust (cedric@beust.com)
-     ================================================
-     Running Test1
-     Passed Test1
-     Running Test2
-     Passed Test2
-     ================================================
-     ========== TESTS PASSED: 2 ===========
-     ========== TESTS FAILED: 0 ===========
-     ================================================
-     ```
+  
 
 2. **Appium Logs**:
    - Logs showing communication between the Appium server and the Android Emulator will be visible in the console.
-   - Example of successful Appium log entry:
-     ```
-     [Appium] Appium v1.21.0 creating new session
-     [Appium] Device: emulator-5554
-     [Appium] App installed successfully
-     [Appium] Session started with ID: 1234abcd5678
-     ```
+   
 
 3. **TestNG Report**:
    - After the tests complete, a TestNG report will be generated in the `/allure-report` directory.
    - The report will display a summary of test results, including which tests passed, failed, and the execution time.
+     ![Screenshot 2024-11-06 204820](https://github.com/user-attachments/assets/571b8c5c-0771-4ccb-9ccc-ccd82c4e8fe2)
+
 
 
